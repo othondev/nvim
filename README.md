@@ -46,7 +46,7 @@ Contributions to improve this configuration are welcome. Please read [CONTRIBUTI
 
 ## Authors
 
-* **Your Name** - *Initial work* - [YourUsername](#)
+* **Othon Ferreira** - *Initial work* - [othondev](#)
 
 ## License
 
