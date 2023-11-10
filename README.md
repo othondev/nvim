@@ -38,7 +38,7 @@ Contributions to improve this configuration are welcome. Please read [CONTRIBUTI
 
 ## To-Do List
 
-- [ ] Refine core configurations.
+- [x] Refine core configurations.
 - [ ] Expand plugin support.
 - [ ] Enhance LSP integration.
 - [ ] Improve documentation.
