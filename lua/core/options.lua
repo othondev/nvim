@@ -44,14 +44,6 @@ opt.synmaxcol = 240                -- Max column for syntax highlight
 opt.termguicolors = true           -- True color support
 opt.signcolumn = 'yes'             -- Always show the sign column
 
--- Remember last position in file
-vim.cmd [[
-  augroup remember_folds
-    autocmd!
-    autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-  augroup end
-]]
-
 -- You can add more options here
 
 
