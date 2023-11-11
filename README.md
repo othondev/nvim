@@ -38,7 +38,7 @@ Contributions to improve this configuration are welcome. Please read [CONTRIBUTI
 
 ## To-Do List
 
-- [ ] Refine core configurations.
+- [x] Refine core configurations.
 - [ ] Expand plugin support.
 - [ ] Enhance LSP integration.
 - [ ] Improve documentation.
@@ -46,7 +46,7 @@ Contributions to improve this configuration are welcome. Please read [CONTRIBUTI
 
 ## Authors
 
-* **Your Name** - *Initial work* - [YourUsername](#)
+* **Othon Ferreira** - *Initial work* - [othondev](#)
 
 ## License
 
