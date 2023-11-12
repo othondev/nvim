@@ -19,6 +19,9 @@ return require("packer").startup(function(use)
 	--theme
 	use({ "rose-pine/neovim", as = "rose-pine" })
 
+	--git
+	use("tpope/vim-fugitive")
+
 	--lsp
 	use({
 		"VonHeikemen/lsp-zero.nvim",
@@ -42,6 +45,7 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
