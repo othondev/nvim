@@ -6,7 +6,7 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
--- Normal Mode --
+                               -- Normal Mode --
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
@@ -26,11 +26,11 @@ map("n", "<S-TAB>", ":bprevious<CR>", opts)
 -- Clear search highlighting with ESC
 map("n", "<ESC>", ":noh<CR>", opts)
 
--- Insert Mode --
+                               -- Insert Mode --
 -- Press jk quickly to exit insert mode
 map("i", "jk", "<ESC>", opts)
 
--- Visual Mode --
+                               -- Visual Mode --
 -- Stay in indent mode
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
@@ -39,12 +39,12 @@ map("v", ">", ">gv", opts)
 map("v", "<A-j>", ":m .+1<CR>==", opts)
 map("v", "<A-k>", ":m .-2<CR>==", opts)
 
--- Visual Block --
+                               -- Visual Block --
 -- Move text up and down
 map("x", "J", ":move '>+1<CR>gv-gv'", opts)
 map("x", "K", ":move '<-2<CR>gv-gv'", opts)
 
--- Command Mode --
+                               -- Command Mode --
 -- Map :W to :w because of frequent typo
 map("c", "W", "w", opts)
 
