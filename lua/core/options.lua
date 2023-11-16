@@ -26,6 +26,7 @@ opt.hlsearch = true                -- Highlight search results
 opt.incsearch = true               -- Makes search act like search in modern browsers
 
 -- Misc
+opt.clipboard = "unnamedplus"
 opt.wrap = false                   -- Disable line wrap
 opt.swapfile = false               -- Don't use swapfile
 opt.backup = false                 -- Don't make a backup before overwriting a file
