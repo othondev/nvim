@@ -12,7 +12,7 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require("packer").startup(function(use)
-	-- Core
+	--core
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
 
@@ -42,6 +42,7 @@ return require("packer").startup(function(use)
 			{ "neovim/nvim-lspconfig" },
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
+            { "windwp/nvim-autopairs" },
 
 			-- Autocompletion
 			{ "hrsh7th/nvim-cmp" },

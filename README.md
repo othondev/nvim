@@ -40,6 +40,7 @@ Contributions to improve this configuration are welcome. Please read [CONTRIBUTI
 
 - [x] Refine core configurations.
 - [x] Define theme support
+- [x] Define auto load custom functions
 - [x] Expand plugin support.
 - [ ] Enhance LSP integration.
 - [ ] Improve documentation.
