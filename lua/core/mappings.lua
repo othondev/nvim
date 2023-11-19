@@ -5,7 +5,6 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
-
                                -- Normal Mode --
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h", opts)
@@ -22,6 +21,16 @@ map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 map("n", "<TAB>", ":bnext<CR>", opts)
 map("n", "<S-TAB>", ":bprevious<CR>", opts)
+
+-- Split windows
+map("n", "ss", ":split<CR>", opts)
+map("n", "sv", ":vsplit<CR>", opts)
+
+-- Navigate windows
+map("n", "sh", "<C-w>h", opts)
+map("n", "sk", "<C-w>k", opts)
+map("n", "sj", "<C-w>j", opts)
+map("n", "sl", "<C-w>l", opts)
 
 -- Clear search highlighting with ESC
 map("n", "<ESC>", ":noh<CR>", opts)
