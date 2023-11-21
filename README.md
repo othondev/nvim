@@ -42,9 +42,10 @@ Contributions to improve this configuration are welcome. Please read [CONTRIBUTI
 - [x] Define theme support
 - [x] Define auto load custom functions
 - [x] Expand plugin support.
-- [ ] Enhance LSP integration.
-- [ ] Improve documentation.
-- [ ] Optimize performance and startup time.
+- [x] Enhance LSP integration.
+- [x] Improve documentation.
+- [x] Optimize performance and startup time.
+- [ ] Use 'dd' to remove quicklist item.
 
 ## Authors
 
