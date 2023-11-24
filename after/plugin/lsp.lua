@@ -41,6 +41,7 @@ lsp.set_preferences({
 lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
+    -- Remapping
 	vim.keymap.set("n", "gd", function()
 		vim.lsp.buf.definition()
 	end, opts)
@@ -69,10 +70,21 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("i", "<C-h>", function()
 		vim.lsp.buf.signature_help()
 	end, opts)
+
+    -- Auto-fixing with ESLint on save
+    if client.server_capabilities.documentFormattingProvider then
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = bufnr,
+            callback = function()
+                -- Trigger ESLint auto-fix before saving the file
+                vim.lsp.buf.format({ timeout_ms = 2000 })
+            end
+        })
+    end
 end)
 
 lsp.setup()
 
 vim.diagnostic.config({
-	virtual_text = true,
+    virtual_text = true,
 })
