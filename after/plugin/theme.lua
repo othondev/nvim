@@ -1,5 +1,4 @@
 vim.cmd("colorscheme rose-pine")
-require('incline').setup()
 
 local lualine = require('lualine')
 
