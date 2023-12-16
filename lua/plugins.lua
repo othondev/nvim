@@ -1,74 +1,74 @@
 local ensure_packer = function()
-	local fn = vim.fn
-	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-	if fn.empty(fn.glob(install_path)) > 0 then
-		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-		vim.cmd([[packadd packer.nvim]])
-		return true
-	end
-	return false
+    local fn = vim.fn
+    local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+        vim.cmd([[packadd packer.nvim]])
+        return true
+    end
+    return false
 end
 
 local packer_bootstrap = ensure_packer()
 
 return require("packer").startup(function(use)
-	--core
-	use("wbthomason/packer.nvim")
-	use("nvim-lua/plenary.nvim")
+    --core
+    use("wbthomason/packer.nvim")
+    use("nvim-lua/plenary.nvim")
 
-	--files
-	use({
-		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
-	use({
-		"nvim-tree/nvim-tree.lua",
-		requires = { { "nvim-tree/nvim-web-devicons" } },
-	})
+    --files
+    use({
+        "nvim-telescope/telescope.nvim",
+        requires = { { "nvim-lua/plenary.nvim" } },
+    })
+    use({
+        "nvim-tree/nvim-tree.lua",
+        requires = { { "nvim-tree/nvim-web-devicons" } },
+    })
 
-	--theme
-	use({ "rose-pine/neovim", as = "rose-pine" })
-    use ({
+    --theme
+    use({ "rose-pine/neovim", as = "rose-pine" })
+    use({
         'nvim-lualine/lualine.nvim',
         requires =
         {
-            'nvim-tree/nvim-web-devicons', opt = true 
+            'nvim-tree/nvim-web-devicons', opt = true
         }
     })
     use "b0o/incline.nvim"
     use "folke/twilight.nvim"
     use "folke/zen-mode.nvim"
 
-	--git
-	use("tpope/vim-fugitive")
-	use("lewis6991/gitsigns.nvim")
+    --git
+    use("tpope/vim-fugitive")
+    use("lewis6991/gitsigns.nvim")
 
-	--lsp
-	use({
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v1.x",
-		requires = {
-			-- LSP Support
-			{ "neovim/nvim-lspconfig" },
-			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
+    --lsp
+    use({
+        "VonHeikemen/lsp-zero.nvim",
+        branch = "v1.x",
+        requires = {
+            -- LSP Support
+            { "neovim/nvim-lspconfig" },
+            { "williamboman/mason.nvim" },
+            { "williamboman/mason-lspconfig.nvim" },
             { "windwp/nvim-autopairs" },
 
-			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "saadparwaiz1/cmp_luasnip" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-nvim-lua" },
+            -- Autocompletion
+            { "hrsh7th/nvim-cmp" },
+            { "hrsh7th/cmp-buffer" },
+            { "hrsh7th/cmp-path" },
+            { "saadparwaiz1/cmp_luasnip" },
+            { "hrsh7th/cmp-nvim-lsp" },
+            { "hrsh7th/cmp-nvim-lua" },
 
-			-- Snippets
-			{ "L3MON4D3/LuaSnip" },
-			{ "rafamadriz/friendly-snippets" },
-		},
-	})
+            -- Snippets
+            { "L3MON4D3/LuaSnip" },
+            { "rafamadriz/friendly-snippets" },
+        },
+    })
 
-	if packer_bootstrap then
-		require("packer").sync()
-	end
+    if packer_bootstrap then
+        require("packer").sync()
+    end
 end)
