@@ -37,6 +37,7 @@ return require("packer").startup(function(use)
     })
     use "folke/twilight.nvim"
     use "folke/zen-mode.nvim"
+    use "akinsho/bufferline.nvim"
 
     --git
     use("tpope/vim-fugitive")
