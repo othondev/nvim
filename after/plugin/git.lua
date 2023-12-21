@@ -7,10 +7,10 @@ end
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map("n", "<leader>gg", ":Git<CR>", opts)
-map("n", "<leader>gd", ":Gdiffsplit<CR>", opts)
-map("n", "<leader>gb", ":Git blame<CR>", opts)
-map("n", "<leader>gl", ":Git log<CR>", opts)
+map("n", "<leader>g", ":Git<CR>", opts)
+map("n", "<leader>d", ":Gdiffsplit<CR>", opts)
+map("n", "<leader>b", ":Git blame<CR>", opts)
+map("n", "<leader>l", ":Git log<CR>", opts)
 
 require("gitsigns").setup({
     signs = {
@@ -22,8 +22,8 @@ require("gitsigns").setup({
         untracked = { text = "┆" },
     },
     signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
-    numhl = false,  -- Toggle with `:Gitsigns toggle_numhl`
-    linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
+    numhl = false,     -- Toggle with `:Gitsigns toggle_numhl`
+    linehl = false,    -- Toggle with `:Gitsigns toggle_linehl`
     word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
     watch_gitdir = {
         follow_files = true,

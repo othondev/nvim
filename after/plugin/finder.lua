@@ -40,6 +40,7 @@ require('telescope').setup {
             i = {
                 ["<C-j>"] = "cycle_history_next",
                 ["<C-k>"] = "cycle_history_prev",
+                ["<C-h>"] = "select_horizontal",
             },
         },
     }
@@ -50,5 +51,6 @@ vim.api.nvim_set_keymap("n", "<leader>fe", ":NvimTreeFindFile<CR>", { noremap = 
 vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>Telescope diagnostics<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>Telescope command_history<cr>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("v", "<C-f>", "<cmd>Telescope grep_string<cr>", { noremap = true, silent = true })
