@@ -25,10 +25,6 @@ map("n", "<S-TAB>", ":bprevious<CR>", opts)
 -- Clear search highlighting with ESC
 map("n", "<ESC>", ":noh<CR>", opts)
 
--- Insert Mode --
--- Press jk quickly to exit insert mode
-map("i", "jk", "<ESC>", opts)
-
 -- Visual Mode --
 -- Stay in indent mode
 map("v", "<", "<gv", opts)
