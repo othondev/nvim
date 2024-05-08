@@ -1,24 +1,35 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+local global = {
+  mapleader = ' ',
+  maplocalleader = ' ',
+  have_nerd_font = false,
+}
 
-vim.g.have_nerd_font = false
+local options = {
+  number = true,
+  mouse = 'a',
+  showmode = false,
+  clipboard = 'unnamedplus',
+  breakindent = true,
+  undofile = true,
+  ignorecase = true,
+  smartcase = true,
+  signcolumn = 'yes',
+  updatetime = 250,
+  timeoutlen = 300,
+  splitright = true,
+  splitbelow = true,
+  list = true,
+  listchars = { tab = '» ', trail = '·', nbsp = '␣' },
+  inccommand = 'split',
+  cursorline = true,
+  scrolloff = 10,
+  hlsearch = true,
+}
 
-vim.opt.number = true
-vim.opt.mouse = 'a'
-vim.opt.showmode = false
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.breakindent = true
-vim.opt.undofile = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.signcolumn = 'yes'
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-vim.opt.inccommand = 'split'
-vim.opt.cursorline = true
-vim.opt.scrolloff = 10
-vim.opt.hlsearch = true
+for k, v in pairs(global) do
+  vim.opt[k] = v
+end
+
+for k, v in pairs(options) do
+  vim.opt[k] = v
+end
