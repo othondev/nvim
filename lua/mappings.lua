@@ -12,6 +12,7 @@ Config.mappings = {
     ['<leader>l'] = { cmd = ':GlLog', desc = '[G]it list log' },
     ['<leader>sg'] = { cmd = ':Telescope live_grep', desc = 'Search with live grep' },
     ['<leader>sc'] = { cmd = ':Changes', desc = '[S]earch on [C]hanges' },
+    ['<leader>sn'] = { cmd = ':lua SearchNvimFiles()', desc = '[S]earch [N]eovim files' },
     ['[['] = { cmd = ':lua vim.diagnostic.goto_prev()', desc = 'Previous error' },
     ['\\'] = { cmd = ':Neotree toggle float dir=./ reveal_force_cwd', desc = 'Open float file explore' },
     [']]'] = { cmd = ':lua vim.diagnostic.goto_next()', desc = 'Next error' },
