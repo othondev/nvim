@@ -13,4 +13,4 @@ require('lazy').setup {
   { import = 'plugins' },
 }
 
-require 'myconfig'
+require 'mappings'

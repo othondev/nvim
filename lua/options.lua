@@ -27,7 +27,7 @@ local options = {
 }
 
 for k, v in pairs(global) do
-  vim.opt[k] = v
+  vim.g[k] = v
 end
 
 for k, v in pairs(options) do
