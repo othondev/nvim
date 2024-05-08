@@ -24,6 +24,7 @@ local options = {
   cursorline = true,
   scrolloff = 10,
   hlsearch = true,
+  undodir = vim.fn.stdpath 'config' .. '/undo',
 }
 
 for k, v in pairs(global) do
