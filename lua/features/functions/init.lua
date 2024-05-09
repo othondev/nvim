@@ -12,3 +12,12 @@ Search = {
     }
   end,
 }
+
+Info = {
+  BranchName = function()
+    local handle = io.popen 'git rev-parse --abbrev-ref HEAD 2>/dev/null'
+    local branchname = handle:read '*a'
+    handle:close()
+    return #branchname > 0 and string.gsub(branchname, '\n', '') or ''
+  end,
+}

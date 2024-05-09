@@ -25,6 +25,7 @@ local options = {
   scrolloff = 10,
   hlsearch = true,
   undodir = '/tmp/' .. '/nvim_undo',
+  statusline = '%<%f %h%m%r%=%-14.(%l,%c%V%) [%{luaeval("Info.BranchName()")}]',
 }
 
 for k, v in pairs(global) do
