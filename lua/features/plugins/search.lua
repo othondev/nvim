@@ -3,6 +3,18 @@ return {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('telescope').setup {
+        defaults = {
+          mappings = {
+            i = {
+              ['<C-k>'] = require('telescope.actions').cycle_history_next,
+              ['<C-j>'] = require('telescope.actions').cycle_history_prev,
+            },
+          },
+        },
+      }
+    end,
   },
   { 'junegunn/fzf.vim', dependencies = {
     'junegunn/fzf',
