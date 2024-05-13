@@ -6,6 +6,7 @@ return {
     config = function()
       require('telescope').setup {
         defaults = {
+          path_display = { 'smart' },
           mappings = {
             i = {
               ['<C-k>'] = require('telescope.actions').cycle_history_next,
