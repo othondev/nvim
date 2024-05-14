@@ -3,11 +3,12 @@ local Config = {}
 Config.mappings = {
   n = {
     ['<C-b>'] = { cmd = ':Neotree right toggle buffers', desc = 'Open Buffers List' },
-    ['<C-f>'] = { cmd = ':Telescope grep_string', desc = 'Search git files' },
+    ['<C-f>'] = { cmd = ':Telescope live_grep', desc = 'Search git files' },
     ['<C-p>'] = { cmd = ':Telescope find_files', desc = 'Search git files' },
     ['<ESC>'] = { cmd = '<ESC>:nohlsearch', desc = 'Remove search text select' },
     ['<TAB>'] = { cmd = ':Telescope buffers' },
     ['<leader>/'] = { cmd = ':lua Search.OpenFiles()', desc = '[S]earch [/] in Open Files' },
+    ['<leader>;'] = { cmd = ':Telescope commands', desc = 'Search Commands' },
     ['<leader><Space>'] = { cmd = ':Telescope keymaps', desc = 'Telescope keymaps' },
     ['<leader>a'] = { cmd = ':lua vim.lsp.buf.code_action()', desc = 'Code Actions' },
     ['<leader>gs'] = { cmd = ':Git', desc = '[G]it [S]tatus' },
@@ -21,7 +22,6 @@ Config.mappings = {
     [']]'] = { cmd = ':lua vim.diagnostic.goto_next()', desc = 'Next error' },
   },
   v = {
-    ['<C-f>'] = { cmd = ':Telescope grep_string', desc = '[S]earch selected text' },
     ['<leader>h'] = { cmd = ':BCommits', desc = 'Selection [H]istory' },
   },
 }
