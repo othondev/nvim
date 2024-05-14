@@ -12,8 +12,8 @@ Config.mappings = {
     ['<leader><Space>'] = { cmd = ':Telescope keymaps', desc = 'Telescope keymaps' },
     ['<leader>a'] = { cmd = ':lua vim.lsp.buf.code_action()', desc = 'Code Actions' },
     ['<leader>gs'] = { cmd = ':Git', desc = '[G]it [S]tatus' },
-    ['<leader>fh'] = { cmd = ':BCommits', desc = 'Current File [H]istory' },
-    ['<leader>gl'] = { cmd = ':GlLog', desc = '[G]it [L]og' },
+    ['<leader>fh'] = { cmd = ':DiffviewFileHistory %', desc = 'Current File [H]istory' },
+    ['<leader>gl'] = { cmd = ':DiffviewFileHistory', desc = '[G]it [L]og' },
     ['<leader>sc'] = { cmd = ':Changes', desc = '[S]earch on [C]hanges' },
     ['<leader>sg'] = { cmd = ':Telescope live_grep', desc = 'Search with live grep' },
     ['<leader>sn'] = { cmd = ':lua Search.NvimFiles()', desc = '[S]earch [N]eovim files' },
@@ -22,7 +22,8 @@ Config.mappings = {
     [']]'] = { cmd = ':lua vim.diagnostic.goto_next()', desc = 'Next error' },
   },
   v = {
-    ['<leader>h'] = { cmd = ':BCommits', desc = 'Selection [H]istory' },
+    ['<C-f>'] = { cmd = ':Telescope grep_string', desc = '[S]earch selected text' },
+    ['<leader>fh'] = { cmd = ':DiffviewFileHistory', desc = 'Selection [H]istory' },
   },
 }
 
