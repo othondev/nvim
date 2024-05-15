@@ -9,6 +9,9 @@ return {
     config = function()
       require('telescope').setup {
         defaults = {
+          file_ignore_patterns = {
+            'swagger.*', --TODO: Need to load it for a project config(maybe a file?)
+          },
           preview = {
             filesize_hook = function(filepath, bufnr, opts)
               local max_bytes = 5000
@@ -16,11 +19,12 @@ return {
               require('telescope.previewers.utils').job_maker(cmd, bufnr, opts)
             end,
           },
-          path_display = { 'smart' },
+          path_display = { 'truncate' },
           mappings = {
             i = {
               ['<C-k>'] = require('telescope.actions').cycle_history_next,
               ['<C-j>'] = require('telescope.actions').cycle_history_prev,
+              ['<C-f>'] = require('telescope.actions').to_fuzzy_refine,
             },
           },
         },
