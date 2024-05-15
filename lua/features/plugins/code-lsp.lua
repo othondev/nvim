@@ -7,9 +7,16 @@ return {
       auto_install = true,
       highlight = {
         enable = true,
-        additional_vim_regex_highlighting = { 'ruby' },
+        disable = function(lang, bufnr)
+          local size = vim.fn.getfsize(vim.api.nvim_buf_get_name(bufnr))
+          local isTooLarge = size > 5000
+          if isTooLarge then
+            print 'File highlight is too large to be applied'
+            return true
+          end
+        end,
       },
-      indent = { enable = true, disable = { 'ruby' } },
+      indent = { enable = true },
     },
     config = function(_, opts)
       require('nvim-treesitter.install').prefer_git = true
