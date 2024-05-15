@@ -9,7 +9,7 @@ Config.mappings = {
     ['<TAB>'] = { cmd = ':Telescope buffers' },
     ['<leader>/'] = { cmd = ':lua Search.OpenFiles()', desc = '[S]earch [/] in Open Files' },
     ['<leader>;'] = { cmd = ':Telescope commands', desc = 'Search Commands' },
-    ['<leader><Space>'] = { cmd = ':Telescope keymaps', desc = 'Telescope keymaps' },
+    ['<leader><Space>'] = { cmd = ':Telescope resume', desc = 'Telescope Resume' },
     ['<leader>a'] = { cmd = ':lua vim.lsp.buf.code_action()', desc = 'Code Actions' },
     ['<leader>gs'] = { cmd = ':Git', desc = '[G]it [S]tatus' },
     ['<leader>fh'] = { cmd = ':DiffviewFileHistory %', desc = 'Current File [H]istory' },
