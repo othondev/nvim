@@ -28,6 +28,11 @@ local options = {
   statusline = '%<%f %h%m%r%=%-14.(%l,%c%V%) [%{luaeval("Info.BranchName()")}]',
 }
 
+local diagnostic = {
+  signs = false,
+  virtual_text = false,
+}
+
 for k, v in pairs(global) do
   vim.g[k] = v
 end
@@ -35,3 +40,5 @@ end
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+
+vim.diagnostic.config(diagnostic)
