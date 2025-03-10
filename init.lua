@@ -1,8 +1,13 @@
-require 'options'
+require("options")
+require("mappings")
 
-vim.g.mapleader = ' '
+require("addons.init").LoadPlugins()
+-- load theme
+dofile(vim.g.base46_cache .. "defaults")
+dofile(vim.g.base46_cache .. "statusline")
 
-vim.keymap.set("n", "-", ":tabnew | Explore<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<Esc>", ":nohlsearch<CR><ESC>", { noremap = true, silent = true })
+require("nvchad.autocmds")
 
-vim.cmd('filetype plugin indent on')
+vim.schedule(function()
+
+end)
